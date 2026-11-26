@@ -3,18 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contador de cliques</title>
+  <meta name="theme-color" content="#080b14">
+  <meta name="description" content="Um contador de cliques com visual gamer.">
+  <title>Click Counter — Arcade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <main class="counter">
-    <h1>Contador de cliques</h1>
-    <p id="count" aria-live="polite">0</p>
-    <div class="buttons">
-      <button id="increment" type="button">Clique aqui</button>
-      <button id="reset" type="button" class="secondary">Zerar contador</button>
-    </div>
+  <main class="page-shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span class="brand-name">ARCADE<span class="brand-divider">/</span>LAB</span>
+      </div>
+      <div class="system-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        SISTEMA ONLINE
+      </div>
+    </header>
+
+    <section class="counter-card" aria-labelledby="counter-title">
+      <div class="card-topline">
+        <span class="eyebrow"><span class="eyebrow-line"></span> FERRAMENTA 001</span>
+        <span class="version">CLICK TRACKER <span>V 1.0</span></span>
+      </div>
+
+      <div class="heading-row">
+        <div>
+          <p class="kicker">SEU PLACAR, SUAS REGRAS</p>
+          <h1 id="counter-title">Click <span>Counter</span></h1>
+        </div>
+        <div class="target-icon" aria-hidden="true">
+          <span class="target-ring"></span>
+          <span class="target-center"></span>
+        </div>
+      </div>
+
+      <div class="score-panel">
+        <div class="score-label">
+          <span>CONTAGEM ATUAL</span>
+          <span class="live-label"><span></span> LIVE</span>
+        </div>
+        <p id="count" class="score" aria-live="polite" aria-atomic="true">0</p>
+        <div class="score-baseline"><span></span></div>
+      </div>
+
+      <div class="controls" aria-label="Controles do contador">
+        <button id="decrement" class="button button-secondary" type="button" aria-label="Diminuir contagem" disabled>
+          <span class="button-symbol" aria-hidden="true">−</span>
+          <span>Diminuir</span>
+        </button>
+        <button id="increment" class="button button-primary" type="button" aria-label="Aumentar contagem">
+          <span class="button-symbol" aria-hidden="true">+</span>
+          <span>Adicionar ponto</span>
+        </button>
+      </div>
+
+      <button id="reset" class="reset-button" type="button">
+        <span aria-hidden="true">↺</span> ZERAR CONTADOR
+      </button>
+
+      <footer class="card-footer">
+        <span><span class="footer-indicator"></span> PRONTO PARA JOGAR</span>
+        <span>FEITO PARA VOCÊ <span class="footer-star" aria-hidden="true">✦</span></span>
+      </footer>
+    </section>
+
+    <p class="page-caption">ARCADE LAB <span>—</span> CLICK COUNTER</p>
   </main>
 </body>
 </html>
